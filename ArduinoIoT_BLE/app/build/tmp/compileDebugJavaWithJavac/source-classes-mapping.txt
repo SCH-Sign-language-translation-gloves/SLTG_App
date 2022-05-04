@@ -1,0 +1,14 @@
+com/remnant/arduinoiot_ble/MainActivity.java
+ com.remnant.arduinoiot_ble.MainActivity
+ com.remnant.arduinoiot_ble.MainActivity$1
+ com.remnant.arduinoiot_ble.MainActivity$2
+ com.remnant.arduinoiot_ble.MainActivity$2$1
+ com.remnant.arduinoiot_ble.MainActivity$3
+ com.remnant.arduinoiot_ble.MainActivity$4
+ com.remnant.arduinoiot_ble.MainActivity$5
+ com.remnant.arduinoiot_ble.MainActivity$5$1
+ com.remnant.arduinoiot_ble.MainActivity$5$2
+ com.remnant.arduinoiot_ble.MainActivity$6
+ com.remnant.arduinoiot_ble.MainActivity$7
+com/remnant/arduinoiot_ble/BuildConfig.java
+ com.remnant.arduinoiot_ble.BuildConfig
