@@ -12,7 +12,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e08ecf0e-2202-47cc-8e21-7653bcebd994" name="Default Changelist" comment="ArduinoIoT_BLE 테스트 전구 코드 수정1" />
+    <list default="true" id="e08ecf0e-2202-47cc-8e21-7653bcebd994" name="Default Changelist" comment="ArduinoIoT_BLE 테스트 전구 코드 수정1">
+      <change afterPath="$PROJECT_DIR$/../ArduinoIoT_BLE2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIoT_BLE2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIoT_BLE2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIoT_BLE2/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIoT_BLE2/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +26,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[52004c624a30356b]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\nhkim\.android\avd\Pixel_2_API_31_24.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

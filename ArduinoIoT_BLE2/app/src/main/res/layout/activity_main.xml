@@ -14,15 +14,13 @@
         android:layout_alignParentBottom="true" />
 
 
-
     <Button
         android:id="@+id/btnOn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="on"
         android:onClick="writeON"
-        />
+        android:text="on" />
     <Button
         android:id="@+id/btnOff"
         android:layout_width="match_parent"

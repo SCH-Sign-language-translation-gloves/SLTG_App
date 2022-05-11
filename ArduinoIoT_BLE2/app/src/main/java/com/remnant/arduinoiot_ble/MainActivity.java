@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if(this.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (this.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("This app needs location access");
                 builder.setMessage("Please grant location access so this app can detect beacons.");
@@ -96,43 +96,41 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
-                 });
+                });
                 builder.show();
             }
         }
 
 
-        seekBar = (SeekBar)findViewById(R.id.seek);
+        seekBar = (SeekBar) findViewById(R.id.seek);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                                                @Override
                                                public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
                                                    int iSeekValue = 0;
-                                                   if(i>=0 && i<25)
-                                                   {
+                                                   if (i >= 0 && i < 25) {
                                                        iSeekValue = 1;
-                                                   } else if(i>=25 && i<50) {
+                                                   } else if (i >= 25 && i < 50) {
                                                        iSeekValue = 2;
-                                                   } else if(i>=50 && i<75) {
+                                                   } else if (i >= 50 && i < 75) {
                                                        iSeekValue = 3;
-                                                   } else if(i>=75 && i<100) {
+                                                   } else if (i >= 75 && i < 100) {
                                                        iSeekValue = 4;
                                                    } else {
                                                        iSeekValue = 0;
                                                    }
 
-                                                   if(btGatt != null)
-                                                   {
-                                                        byte[] value=new byte[1];
+                                                   if (btGatt != null) {
+                                                       byte[] value = new byte[1];
 
-                                                        value [0]=(byte)(iSeekValue);
-                                                        ValueCharacteristic_write.setValue(value);
-                                                        btGatt.writeCharacteristic(ValueCharacteristic_write);
+                                                       value[0] = (byte) (iSeekValue);
+                                                       ValueCharacteristic_write.setValue(value);
+                                                       btGatt.writeCharacteristic(ValueCharacteristic_write);
 
-                                                       (MainActivity.this).runOnUiThread(new Runnable(){
+                                                       (MainActivity.this).runOnUiThread(new Runnable() {
                                                            @Override
                                                            public void run() {
-                                                               if(value[0] == 0) {
+                                                               if (value[0] == 0) {
                                                                    imageSwitcher.setImageResource(R.drawable.off);
                                                                } else {
                                                                    imageSwitcher.setImageResource(R.drawable.on);
@@ -161,11 +159,11 @@ public class MainActivity extends AppCompatActivity {
 
         );
 
-        imageSwitcher=(ImageSwitcher)findViewById(R.id.imageswitcher);
+        imageSwitcher = (ImageSwitcher) findViewById(R.id.imageswitcher);
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
-                ImageView imageView=new ImageView(getApplicationContext());
+                ImageView imageView = new ImageView(getApplicationContext());
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 return imageView;
             }
@@ -177,19 +175,17 @@ public class MainActivity extends AppCompatActivity {
 
         btnSwitchOn = (Button) findViewById(R.id.btnOn);
         btnSwitchOff = (Button) findViewById(R.id.btnOff);
-        btnRead = (Button)findViewById(R.id.btnRead);
+        btnRead = (Button) findViewById(R.id.btnRead);
 
-        btManager = (BluetoothManager)getSystemService(Context.BLUETOOTH_SERVICE);
+        btManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         btAdapter = btManager.getAdapter();
 
         if (btAdapter == null || !btAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableIntent,REQUEST_ENABLE_BT);
+            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
         }
 
-
-    }// onCreate()
-
+    }
     @Override
     protected void onResume() {
         super.onResume();
