@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960561647399",
+    "project_id": "arduino-app-b69fd",
+    "storage_bucket": "arduino-app-b69fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960561647399:android:e7e7d5f9ce2ef6aacde302",
+        "android_client_info": {
+          "package_name": "com.remnant.arduinoiot_ble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960561647399-5q98b730bthvdcgconfevek7ogoos71v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgLfdtSXXkk4tQ2znrTkcTSTqF34kmIgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960561647399-5q98b730bthvdcgconfevek7ogoos71v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
